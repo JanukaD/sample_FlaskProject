@@ -1,7 +1,7 @@
 from flask import Flask,render_template
+from flask import url_for
 
 app = Flask(__name__)
-
 posts = [
     {
         'author': 'Januka Madushan',
@@ -25,7 +25,7 @@ def home():
 
 @app.route('/about')
 def about():
-    return render_template('about.html')
+    return render_template('about.html',title="About")
 
 
 
