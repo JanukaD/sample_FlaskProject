@@ -6,7 +6,7 @@ from flask_login import LoginManager
 from flask_mail import Mail
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '5d5ae8b3008b9072d2cfbb267c8705ed'
+app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
@@ -20,5 +20,4 @@ app.config['MAIL_USERNAME'] = os.environ.get('EMAIL_USER')
 app.config['MAIL_PASSWORD'] = os.environ.get('EMAIL_PASS')
 mail = Mail(app)
 
-from app import routes
-
+from flaskblog import routes
